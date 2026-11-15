@@ -1,1 +1,7 @@
-{"download_url":"https://raw.githubusercontent.com/printzo-app/printzo-releases/main/PrintKiosk-Setup.exe","notes":"Printzo v1.3.0 — silent self-update, setup wizard, credit billing, UPI tap-to-pay, multi-machine Auto/Print-next (Telugu + English)","version":"1.3.0"}
+{
+  "version": "1.3.1",
+  "download_url": "https://raw.githubusercontent.com/printzo-app/printzo-releases/main/PrintKiosk-Setup.exe",
+  "code_url": "https://raw.githubusercontent.com/printzo-app/printzo-releases/main/PrintKiosk-Code-1.3.1.zip",
+  "code_sha256": "675fe911d88875d1d5767731c2758c022d05f587554a507389f73aca38273b04",
+  "notes": "Printzo v1.3.1 — QR code fixed (works via quickchart.io, uses the shop WiFi address), UPI tap-to-pay button, how-it-works strip, multi-machine Auto / Print-next (Telugu + English)"
+}
