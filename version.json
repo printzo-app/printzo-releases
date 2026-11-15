@@ -1,7 +1,7 @@
 {
-  "version": "1.3.2",
+  "version": "1.3.3",
   "download_url": "https://raw.githubusercontent.com/printzo-app/printzo-releases/main/PrintKiosk-Setup.exe",
-  "code_url": "https://raw.githubusercontent.com/printzo-app/printzo-releases/main/PrintKiosk-Code-1.3.2.zip",
-  "code_sha256": "6ef0703b7699ff321437274b0d47cd6b267bd53bd4f8905c6492dcc830ca9016",
-  "notes": "Printzo v1.3.2 — Shop QR now opens WhatsApp (customer sends the PDF on WhatsApp, no shop WiFi needed); falls back to the web print page when no WhatsApp number is set. Includes the v1.3.1 QR fix, UPI tap-to-pay button, how-it-works strip, multi-machine Auto / Print-next (Telugu + English)"
+  "code_url": "https://raw.githubusercontent.com/printzo-app/printzo-releases/main/PrintKiosk-Code-1.3.3.zip",
+  "code_sha256": "7e8d00ea9750341d4d667fb6e794522cb42c130f5e1008f1dcbd0099d6b7327e",
+  "notes": "Printzo v1.3.3 — Clear labels: owner dashboard shows 'Owner login — shop name' banner, customer page shows 'Customer page — shop name' banner, header shows whose login it is, Owner button hides inside the owner view. Includes v1.3.2 WhatsApp QR, v1.3.1 QR fix, UPI tap-to-pay, how-it-works strip, multi-machine Auto / Print-next (Telugu + English)"
 }
