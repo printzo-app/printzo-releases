@@ -13,100 +13,221 @@
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: -apple-system, "Segoe UI", Roboto, "Noto Sans Telugu", sans-serif; background: #f2f5f7; color: #1c2b36; line-height: 1.6; }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 0 16px 48px; }
-  header { background: #14324f; color: #fff; text-align: center; padding: 32px 16px 28px; border-radius: 0 0 24px 24px; }
-  header img { width: 72px; height: 72px; border-radius: 18px; }
-  header h1 { font-size: 34px; margin-top: 10px; letter-spacing: 1px; }
-  header p { color: #bfe3de; font-size: 17px; margin-top: 4px; }
-  .card { background: #fff; border-radius: 16px; padding: 24px 20px; margin-top: 20px; box-shadow: 0 2px 10px rgba(20,50,79,.08); }
-  .card h2 { font-size: 21px; color: #14324f; margin-bottom: 10px; }
-  .card p { font-size: 16px; }
-  .btn { display: block; text-align: center; background: #0e9b8a; color: #fff; font-size: 20px; font-weight: 700; text-decoration: none; padding: 16px 20px; border-radius: 14px; margin-top: 16px; }
-  .btn small { display: block; font-size: 14px; font-weight: 400; margin-top: 4px; opacity: .9; }
-  .btn:active { background: #0b7d6f; }
-  .note { font-size: 14px; color: #5a6b78; text-align: center; margin-top: 10px; }
-  .steps { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
-  .step { background: #eef7f5; border-left: 5px solid #0e9b8a; border-radius: 10px; padding: 12px 14px; font-size: 16px; }
-  .step b { color: #14324f; }
-  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
-  .feat { background: #f2f5f7; border-radius: 12px; padding: 12px; font-size: 15px; }
-  .feat b { display: block; color: #14324f; margin-bottom: 2px; }
-  .price { text-align: center; }
-  .price .big { font-size: 34px; font-weight: 800; color: #14324f; }
-  .price .per { font-size: 17px; color: #5a6b78; }
-  .btn2 { display: block; text-align: center; background: #14324f; color: #fff; font-size: 17px; font-weight: 600; text-decoration: none; padding: 13px 18px; border-radius: 12px; margin-top: 14px; }
-  footer { text-align: center; color: #7a8a96; font-size: 14px; margin-top: 28px; }
-  footer a { color: #0e9b8a; text-decoration: none; }
-  @media (max-width: 520px) {
-    header h1 { font-size: 28px; }
-    .grid { grid-template-columns: 1fr; }
-    .btn { font-size: 18px; }
+  a { text-decoration: none; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+  /* Header */
+  .site-header { background: #14324f; position: sticky; top: 0; z-index: 10; box-shadow: 0 2px 12px rgba(0,0,0,.18); }
+  .site-header .container { display: flex; align-items: center; gap: 28px; height: 64px; }
+  .brand { display: flex; align-items: center; gap: 10px; color: #fff; font-size: 22px; font-weight: 800; letter-spacing: 1px; }
+  .brand img { width: 36px; height: 36px; border-radius: 9px; }
+  nav { display: flex; gap: 22px; margin-left: auto; }
+  nav a { color: #cfe3df; font-size: 15px; font-weight: 600; }
+  nav a:hover { color: #fff; }
+  .header-btn { background: #0e9b8a; color: #fff; font-size: 15px; font-weight: 700; padding: 9px 18px; border-radius: 10px; white-space: nowrap; }
+  .header-btn:hover { background: #0b7d6f; }
+
+  /* Hero */
+  .hero { background: linear-gradient(180deg, #14324f 0%, #1d4568 100%); color: #fff; padding: 56px 0 60px; }
+  .hero .container { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; }
+  .hero h1 { font-size: 40px; line-height: 1.25; }
+  .hero h1 span { color: #7fd4c8; }
+  .hero p.lead { color: #cfe3df; font-size: 18px; margin: 16px 0 24px; }
+  .btn { display: inline-block; background: #0e9b8a; color: #fff; font-size: 19px; font-weight: 700; padding: 15px 28px; border-radius: 14px; }
+  .btn small { display: block; font-size: 13px; font-weight: 400; margin-top: 3px; opacity: .92; }
+  .btn:hover { background: #0b7d6f; }
+  .hero .note { font-size: 14px; color: #a9c6c0; margin-top: 12px; }
+  .hero-card { background: #fff; color: #1c2b36; border-radius: 18px; padding: 24px; box-shadow: 0 12px 32px rgba(0,0,0,.28); }
+  .hero-card h3 { color: #14324f; font-size: 18px; margin-bottom: 12px; }
+  .token-row { display: flex; justify-content: space-between; align-items: center; background: #eef7f5; border-radius: 10px; padding: 10px 14px; margin-bottom: 8px; font-size: 15px; }
+  .token-row .t { font-weight: 800; color: #14324f; }
+  .chip { font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 20px; }
+  .chip.green { background: #d6f2e4; color: #137a4b; }
+  .chip.amber { background: #fdf0d3; color: #8a6100; }
+  .chip.grey { background: #e8edf0; color: #5a6b78; }
+  .hero-card .mini { font-size: 14px; color: #5a6b78; margin-top: 10px; }
+
+  /* Sections */
+  section { padding: 52px 0; }
+  section h2 { font-size: 28px; color: #14324f; text-align: center; margin-bottom: 8px; }
+  section .sub { text-align: center; color: #5a6b78; font-size: 17px; margin-bottom: 32px; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .card { background: #fff; border-radius: 16px; padding: 24px 22px; box-shadow: 0 2px 10px rgba(20,50,79,.08); }
+  .card h3 { color: #14324f; font-size: 19px; margin-bottom: 8px; }
+  .card p { font-size: 15px; color: #3d4f5c; }
+  .step-num { display: inline-block; width: 38px; height: 38px; line-height: 38px; text-align: center; border-radius: 50%; background: #0e9b8a; color: #fff; font-weight: 800; font-size: 18px; margin-bottom: 12px; }
+  .feat b { display: block; color: #14324f; font-size: 17px; margin-bottom: 4px; }
+  .badge { display: inline-block; font-size: 13px; font-weight: 700; padding: 3px 12px; border-radius: 20px; margin-bottom: 10px; }
+  .badge.live { background: #d6f2e4; color: #137a4b; }
+  .badge.soon { background: #fdf0d3; color: #8a6100; }
+  .card .btn-small { display: inline-block; margin-top: 14px; background: #0e9b8a; color: #fff; font-weight: 700; font-size: 15px; padding: 10px 20px; border-radius: 10px; }
+  .card .btn-small:hover { background: #0b7d6f; }
+
+  /* Pricing */
+  .price-box { max-width: 520px; margin: 0 auto; background: #14324f; color: #fff; border-radius: 18px; padding: 36px 28px; text-align: center; }
+  .price-box .big { font-size: 44px; font-weight: 800; }
+  .price-box .per { font-size: 18px; color: #bfe3de; }
+  .price-box p { color: #cfe3df; margin: 10px 0 20px; }
+
+  /* FAQ */
+  .faq { max-width: 760px; margin: 0 auto; }
+  .faq-item { background: #fff; border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(20,50,79,.06); }
+  .faq-item h3 { font-size: 17px; color: #14324f; margin-bottom: 4px; }
+  .faq-item p { font-size: 15px; color: #3d4f5c; }
+
+  /* Footer */
+  footer { background: #14324f; color: #cfe3df; padding: 44px 0 0; }
+  footer .cols { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 32px; padding-bottom: 32px; }
+  footer h4 { color: #fff; font-size: 17px; margin-bottom: 12px; }
+  footer p, footer a { font-size: 15px; color: #b9d2cc; }
+  footer a:hover { color: #fff; }
+  footer ul { list-style: none; }
+  footer ul li { margin-bottom: 8px; }
+  .bottom-bar { border-top: 1px solid rgba(255,255,255,.14); padding: 18px 0; font-size: 14px; color: #9db8b1; text-align: center; }
+
+  @media (max-width: 860px) {
+    .hero .container { grid-template-columns: 1fr; gap: 28px; }
+    .hero h1 { font-size: 30px; }
+    .grid3 { grid-template-columns: 1fr; }
+    nav { display: none; }
+    footer .cols { grid-template-columns: 1fr; gap: 24px; }
+    section { padding: 40px 0; }
   }
 </style>
 </head>
 <body>
-<header>
-  <img src="logo.png" alt="Printzo logo">
-  <h1>Printzo</h1>
-  <p>Xerox Shop Print Kiosk — జిరాక్స్ షాప్ ప్రింట్ కియోస్క్</p>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="#"><img src="logo.png" alt="Printzo logo"> Printzo</a>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#products">Products</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="header-btn" href="https://raw.githubusercontent.com/printzo-app/printzo-releases/main/PrintKiosk-Setup.exe">⬇ Download</a>
+  </div>
 </header>
 
-<div class="wrap">
-
-  <div class="card">
-    <h2>🖨️ మీ షాప్‌లో ప్రింట్ ఆర్డర్లు సులభంగా</h2>
-    <p>Customer తన ఫోన్ నుంచి PDF upload చేస్తాడు, UPI లేదా Cash తో pay చేస్తాడు, token number తీసుకుని print collect చేసుకుంటాడు. మీరు కేవలం print చేయడమే.</p>
-    <a class="btn" href="https://raw.githubusercontent.com/printzo-app/printzo-releases/main/PrintKiosk-Setup.exe">⬇️ Windows కోసం డౌన్‌లోడ్ చేయండి<small>v1.3.0 &nbsp;•&nbsp; Windows 10 / 11 &nbsp;•&nbsp; ~10 MB &nbsp;•&nbsp; Install 1 నిమిషం లోపు</small></a>
-    <p class="note">7 రోజులు FREE trial &nbsp;•&nbsp; తర్వాత ₹240/నెల (₹8/రోజు) &nbsp;•&nbsp; డబ్బు నేరుగా మీ UPI కి</p>
-    <p class="note">Install చేసేటప్పుడు Windows “Unknown publisher” అని చూపిస్తే — More info → Run anyway నొక్కండి.</p>
-  </div>
-
-  <div class="card">
-    <h2>ఎలా పనిచేస్తుంది? / How it works</h2>
-    <div class="steps">
-      <div class="step"><b>1️⃣ Upload —</b> Customer షాప్ దగ్గర QR scan చేసి PDF / ఫోటో upload చేస్తాడు.</div>
-      <div class="step"><b>2️⃣ Pay —</b> UPI తో pay చేస్తే వెంటనే print కి ready; Cash అయితే మీ approval తర్వాత.</div>
-      <div class="step"><b>3️⃣ Token &amp; Collect —</b> Token number వస్తుంది; print అయ్యాక customer collect చేసుకుంటాడు.</div>
+<div class="hero">
+  <div class="container">
+    <div>
+      <h1>మీ Xerox షాప్‌లో<br>print ఆర్డర్లు <span>సులభంగా</span></h1>
+      <p class="lead">Customer తన ఫోన్ నుంచి PDF upload చేస్తాడు, UPI లేదా Cash తో pay చేస్తాడు, token number తీసుకుని print collect చేసుకుంటాడు. మీరు కేవలం print చేయడమే.</p>
+      <a class="btn" href="https://raw.githubusercontent.com/printzo-app/printzo-releases/main/PrintKiosk-Setup.exe">⬇️ Windows కోసం డౌన్‌లోడ్ చేయండి<small>v1.3.0 &nbsp;•&nbsp; Windows 10 / 11 &nbsp;•&nbsp; ~10 MB &nbsp;•&nbsp; Install 1 నిమిషం లోపు</small></a>
+      <p class="note">7 రోజులు FREE trial &nbsp;•&nbsp; తర్వాత ₹240/నెల (₹8/రోజు) &nbsp;•&nbsp; డబ్బు నేరుగా మీ UPI కి</p>
+      <p class="note">Install చేసేటప్పుడు Windows “Unknown publisher” అని చూపిస్తే — More info → Run anyway నొక్కండి.</p>
+    </div>
+    <div class="hero-card">
+      <h3>🖨️ Shop Dashboard — Live Tokens</h3>
+      <div class="token-row"><span class="t">Token #105</span><span>Ravi — 10 pages</span><span class="chip green">Printing</span></div>
+      <div class="token-row"><span class="t">Token #106</span><span>Anitha — 4 pages</span><span class="chip amber">Paid</span></div>
+      <div class="token-row"><span class="t">Token #107</span><span>Kiran — 22 pages</span><span class="chip grey">Waiting</span></div>
+      <p class="mini">ఇది example మాత్రమే — నిజమైన dashboard షాప్ PC లో ఇలాగే కనిపిస్తుంది: tokens, payments, printer queue, అన్నీ ఒకే చోట.</p>
     </div>
   </div>
-
-  <div class="card">
-    <h2>ఎవరికి ఏమిటి?</h2>
-    <div class="grid">
-      <div class="feat"><b>🏪 షాప్ ఓనర్ (Windows PC)</b>పైన ఉన్న Download బటన్ నొక్కి software install చేసుకోండి. మీ షాప్ పేరు, UPI ID, ధరలు, PIN — అన్నీ మీ dashboard లోనే.</div>
-      <div class="feat"><b>📱 కస్టమర్ (మొబైల్)</b>App డౌన్‌లోడ్ అవసరం లేదు — షాప్ దగ్గర QR scan చేసి ఫోన్ browser లోనే order చేయవచ్చు. Mobile app త్వరలో Play Store లో వస్తుంది.</div>
-    </div>
-  </div>
-
-  <div class="card">
-    <h2>Features / ఫీచర్లు</h2>
-    <div class="grid">
-      <div class="feat"><b>🎫 Token System</b>ప్రతి order కి token number — queue లో గందరగోళం లేదు.</div>
-      <div class="feat"><b>💳 UPI + Cash</b>UPI tap-to-pay; Cash కి owner approval.</div>
-      <div class="feat"><b>🖨️ Multi-Machine</b>2–3 printers ఉంటే Auto — ఖాళీ machine కి order వెళ్తుంది.</div>
-      <div class="feat"><b>🧾 Bills &amp; Credit</b>Customer bills, office monthly billing, credit accounts.</div>
-      <div class="feat"><b>🔄 Silent Updates</b>కొత్త version వస్తే అదే install అవుతుంది — మీరేం చేయనక్కర్లేదు.</div>
-      <div class="feat"><b>🌐 తెలుగు + English</b>Customer page, owner dashboard — రెండు భాషల్లో.</div>
-    </div>
-  </div>
-
-  <div class="card price">
-    <h2>ధర / Pricing</h2>
-    <div class="big">₹240<span class="per"> / నెల</span></div>
-    <p>₹8/రోజు &nbsp;•&nbsp; మొదటి 7 రోజులు FREE trial &nbsp;•&nbsp; No hidden charges</p>
-    <a class="btn2" href="https://raw.githubusercontent.com/printzo-app/printzo-releases/main/PrintKiosk-Setup.exe">ఇప్పుడే డౌన్‌లోడ్ చేయండి</a>
-  </div>
-
-  <div class="card">
-    <h2>సహాయం కావాలా? / Need help?</h2>
-    <p>షాప్ ఓనర్లు mail చేయండి: <b>printzoapp@gmail.com</b></p>
-    <p style="margin-top:8px;"><a href="https://github.com/printzo-app/printzo-releases">GitHub లో downloads చూడండి →</a></p>
-  </div>
-
-  <footer>
-    © 2026 Printzo &nbsp;•&nbsp; Made for Xerox &amp; print shops in India
-  </footer>
-
 </div>
+
+<!-- AD SLOT (future): a banner ad can go here, between hero and How it works, when we decide to run ads. -->
+
+<section id="how">
+  <div class="container">
+    <h2>ఎలా పనిచేస్తుంది? / How it works</h2>
+    <p class="sub">మూడు steps — customer కి, మీకు ఇద్దరికీ సులభం.</p>
+    <div class="grid3">
+      <div class="card"><span class="step-num">1</span><h3>Upload</h3><p>Customer షాప్ దగ్గర QR scan చేసి PDF / ఫోటో upload చేస్తాడు — తన ఫోన్ browser లోనే, app అవసరం లేదు.</p></div>
+      <div class="card"><span class="step-num">2</span><h3>Pay</h3><p>UPI తో pay చేస్తే వెంటనే print కి ready; Cash అయితే మీ approval తర్వాత. డబ్బు నేరుగా మీ UPI account కి.</p></div>
+      <div class="card"><span class="step-num">3</span><h3>Token &amp; Collect</h3><p>Token number వస్తుంది; print అయ్యాక customer token చూపించి collect చేసుకుంటాడు. Queue లో గందరగోళం లేదు.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="features" style="background:#fff;">
+  <div class="container">
+    <h2>Features / ఫీచర్లు</h2>
+    <p class="sub">షాప్‌కి కావాల్సినవన్నీ — ఒకే software లో.</p>
+    <div class="grid3">
+      <div class="card feat"><b>🎫 Token System</b><p>ప్రతి order కి token number — queue లో గందరగోళం లేదు, customer status check చేసుకోవచ్చు.</p></div>
+      <div class="card feat"><b>💳 UPI + Cash</b><p>UPI tap-to-pay; Cash కి owner approval. UPI paid orders auto-print అవుతాయి.</p></div>
+      <div class="card feat"><b>🖨️ Multi-Machine</b><p>2–3 printers ఉంటే Auto — ఖాళీగా ఉన్న machine కి order వెళ్తుంది. Print-next బటన్‌తో వరుసగా print చేయవచ్చు.</p></div>
+      <div class="card feat"><b>🧾 Bills &amp; Credit</b><p>Customer bills, office monthly billing, credit accounts — నెల చివర ఒకే bill.</p></div>
+      <div class="card feat"><b>🔄 Silent Updates</b><p>కొత్త version వస్తే అదే install అవుతుంది — మీరేం చేయనక్కర్లేదు.</p></div>
+      <div class="card feat"><b>🌐 తెలుగు + English</b><p>Customer page, owner dashboard — రెండు భాషల్లో. త్వరలో Tamil, Hindi కూడా.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="products">
+  <div class="container">
+    <h2>Our Products / మా ప్రొడక్ట్స్</h2>
+    <p class="sub">Printzo నుంచి — షాప్‌ల కోసం, కస్టమర్ల కోసం.</p>
+    <div class="grid3">
+      <div class="card"><span class="badge live">● Available now</span><h3>Printzo Print Kiosk</h3><p>Windows software for Xerox &amp; print shops — tokens, UPI/Cash, multi-machine printing, bills, silent updates.</p><a class="btn-small" href="https://raw.githubusercontent.com/printzo-app/printzo-releases/main/PrintKiosk-Setup.exe">⬇ Download for Windows</a></div>
+      <div class="card"><span class="badge soon">Coming soon</span><h3>Printzo Mobile App</h3><p>Customers order prints from anywhere on their phone. Play Store లో త్వరలో వస్తుంది — hosted version తర్వాత.</p></div>
+      <div class="card"><span class="badge soon">Coming soon</span><h3>Printzo Hosted</h3><p>Online ordering — customer ఎక్కడి నుంచైనా order చేస్తాడు, షాప్ PC లో order కనిపిస్తుంది. Seller dashboard అందర్నీ ఒకే చోట చూపిస్తుంది.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" style="background:#fff;">
+  <div class="container">
+    <h2>ధర / Pricing</h2>
+    <p class="sub">సింపుల్ ధర — దాచిన charges లేవు.</p>
+    <div class="price-box">
+      <div class="big">₹240<span class="per"> / నెల</span></div>
+      <p>₹8/రోజు &nbsp;•&nbsp; మొదటి 7 రోజులు FREE trial<br>ఒక షాప్‌కి — అన్ని features included</p>
+      <a class="btn" href="https://raw.githubusercontent.com/printzo-app/printzo-releases/main/PrintKiosk-Setup.exe">ఇప్పుడే డౌన్‌లోడ్ చేయండి</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>తరచూ అడిగే ప్రశ్నలు / FAQ</h2>
+    <div class="faq">
+      <div class="faq-item"><h3>Free trial ఉందా?</h3><p>అవును — మొదటి 7 రోజులు పూర్తిగా free. తర్వాత ₹240/నెల, నేరుగా మీ UPI కి pay చేస్తారు.</p></div>
+      <div class="faq-item"><h3>Internet లేకుండా పనిచేస్తుందా?</h3><p>అవును — offline version షాప్ WiFi మీద పనిచేస్తుంది. Customer తన ఫోన్‌తో షాప్ WiFi కి connect అయితే చాలు.</p></div>
+      <div class="faq-item"><h3>Customer కి app download అవసరమా?</h3><p>లేదు — customer షాప్ దగ్గర QR scan చేసి ఫోన్ browser లోనే order చేయవచ్చు. Mobile app త్వరలో వస్తుంది.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="privacy" style="background:#fff; padding-top:32px;">
+  <div class="container" style="max-width:760px;">
+    <h2 style="font-size:22px;">Privacy / గోప్యత</h2>
+    <p style="text-align:center; color:#5a6b78; font-size:15px;">ఈ website మీ personal data సేకరించదు. Downloads GitHub నుంచి వస్తాయి. షాప్‌లో customer files auto-delete అవుతాయి (owner ఎంచుకున్న గంటల్లో). ప్రశ్నలు ఉంటే mail చేయండి.</p>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Printzo</h4>
+        <p>Xerox &amp; print shops కోసం print kiosk software — customer upload → pay → token → collect. Offline + online, Telugu + English.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="https://github.com/printzo-app/printzo-releases">Downloads on GitHub</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Email: <a href="mailto:printzoapp@gmail.com">printzoapp@gmail.com</a></p>
+        <p style="margin-top:8px;">Shop owners — trial &amp; setup కోసం mail చేయండి.</p>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-bar">© 2026 Printzo. All rights reserved. &nbsp;•&nbsp; Made in India</div>
+</footer>
+
 </body>
 </html>
