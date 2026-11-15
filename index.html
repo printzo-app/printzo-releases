@@ -31,7 +31,7 @@
   /* Hero */
   .hero { background: linear-gradient(180deg, #14324f 0%, #1d4568 100%); color: #fff; padding: 56px 0 60px; }
   .hero .container { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; }
-  .hero h1 { font-size: 40px; line-height: 1.25; }
+  .hero h1 { font-size: 44px; line-height: 1.25; }
   .hero h1 span { color: #7fd4c8; }
   .hero p.lead { color: #cfe3df; font-size: 18px; margin: 16px 0 24px; }
   .btn { display: inline-block; background: #0e9b8a; color: #fff; font-size: 19px; font-weight: 700; padding: 15px 28px; border-radius: 14px; }
@@ -126,7 +126,6 @@
       <p class="lead" data-i18n="hero.lead">Customer తన ఫోన్ నుంచి PDF upload చేస్తాడు, UPI లేదా Cash తో pay చేస్తాడు, token number తీసుకుని print collect చేసుకుంటాడు. మీరు కేవలం print చేయడమే.</p>
       <a class="btn" href="https://raw.githubusercontent.com/printzo-app/printzo-releases/main/PrintKiosk-Setup.exe"><span data-i18n="hero.btn">⬇️ Windows కోసం డౌన్‌లోడ్ చేయండి</span><small data-i18n="hero.btnsmall">v1.3.0 &nbsp;•&nbsp; Windows 10 / 11 &nbsp;•&nbsp; ~10 MB &nbsp;•&nbsp; Install 1 నిమిషం లోపు</small></a>
       <p class="note" data-i18n="hero.note1">7 రోజులు FREE trial &nbsp;•&nbsp; తర్వాత ₹240/నెల (₹8/రోజు) &nbsp;•&nbsp; డబ్బు నేరుగా మీ UPI కి</p>
-      <p class="note" data-i18n="hero.note2">Install చేసేటప్పుడు Windows “Unknown publisher” అని చూపిస్తే — More info → Run anyway నొక్కండి.</p>
     </div>
     <div class="hero-card">
       <h3 data-i18n="hero.cardtitle">🖨️ Shop Dashboard — Live Tokens</h3>
@@ -198,6 +197,7 @@
       <div class="faq-item"><h3 data-i18n="faq1.q">Free trial ఉందా?</h3><p data-i18n="faq1.a">అవును — మొదటి 7 రోజులు పూర్తిగా free. తర్వాత ₹240/నెల, నేరుగా మీ UPI కి pay చేస్తారు.</p></div>
       <div class="faq-item"><h3 data-i18n="faq2.q">Internet లేకుండా పనిచేస్తుందా?</h3><p data-i18n="faq2.a">అవును — offline version షాప్ WiFi మీద పనిచేస్తుంది. Customer తన ఫోన్‌తో షాప్ WiFi కి connect అయితే చాలు.</p></div>
       <div class="faq-item"><h3 data-i18n="faq3.q">Customer కి app download అవసరమా?</h3><p data-i18n="faq3.a">లేదు — customer షాప్ దగ్గర QR scan చేసి ఫోన్ browser లోనే order చేయవచ్చు. Mobile app త్వరలో వస్తుంది.</p></div>
+      <div class="faq-item"><h3 data-i18n="faq4.q">Install చేసేటప్పుడు Windows warning వస్తే?</h3><p data-i18n="faq4.a">Windows “Unknown publisher” అని చూపిస్తే — More info → Run anyway నొక్కండి.</p></div>
     </div>
   </div>
 </section>
@@ -246,7 +246,6 @@ en: {
 "hero.btn": "⬇️ Download for Windows",
 "hero.btnsmall": "v1.3.0 &nbsp;•&nbsp; Windows 10 / 11 &nbsp;•&nbsp; ~10 MB &nbsp;•&nbsp; Installs in under a minute",
 "hero.note1": "7 days FREE trial &nbsp;•&nbsp; Then ₹240/month (₹8/day) &nbsp;•&nbsp; Money goes straight to your UPI",
-"hero.note2": "If Windows shows “Unknown publisher” during install — click More info → Run anyway.",
 "hero.cardtitle": "🖨️ Shop Dashboard — Live Tokens",
 "chip.printing": "Printing", "chip.paid": "Paid", "chip.waiting": "Waiting",
 "hero.cardmini": "This is an example only — the real dashboard on the shop PC looks the same: tokens, payments, printer queue, all in one place.",
@@ -271,6 +270,7 @@ en: {
 "faq1.q": "Is there a free trial?", "faq1.a": "Yes — the first 7 days are completely free. After that ₹240/month, paid straight to your UPI.",
 "faq2.q": "Does it work without internet?", "faq2.a": "Yes — the offline version works on shop WiFi. The customer just connects their phone to the shop WiFi.",
 "faq3.q": "Does the customer need to download an app?", "faq3.a": "No — the customer scans the QR at the shop and orders in the phone browser itself. The mobile app is coming soon.",
+      "faq4.q": "Windows shows a warning during install?", "faq4.a": "If Windows shows \u201cUnknown publisher\u201d, click More info \u2192 Run anyway. This is our own installer \u2014 the warning appears because it is new and not yet code-signed.",
 "privacy.title": "Privacy", "privacy.text": "This website collects no personal data. Downloads come from GitHub. Customer files at the shop auto-delete (within the hours the owner chooses). Mail us with any questions.",
 "footer.about": "Print kiosk software for Xerox & print shops — customer upload → pay → token → collect. Offline + online, 4 languages.",
 "footer.links": "Quick Links", "footer.github": "Downloads on GitHub", "footer.contact": "Contact", "footer.email": "Email", "footer.contacttext": "Shop owners — mail us for trial & setup.",
@@ -284,7 +284,6 @@ te: {
 "hero.btn": "⬇️ Windows కోసం డౌన్‌లోడ్ చేయండి",
 "hero.btnsmall": "v1.3.0 &nbsp;•&nbsp; Windows 10 / 11 &nbsp;•&nbsp; ~10 MB &nbsp;•&nbsp; Install 1 నిమిషం లోపు",
 "hero.note1": "7 రోజులు FREE trial &nbsp;•&nbsp; తర్వాత ₹240/నెల (₹8/రోజు) &nbsp;•&nbsp; డబ్బు నేరుగా మీ UPI కి",
-"hero.note2": "Install చేసేటప్పుడు Windows “Unknown publisher” అని చూపిస్తే — More info → Run anyway నొక్కండి.",
 "hero.cardtitle": "🖨️ Shop Dashboard — Live Tokens",
 "chip.printing": "Printing", "chip.paid": "Paid", "chip.waiting": "Waiting",
 "hero.cardmini": "ఇది example మాత్రమే — నిజమైన dashboard షాప్ PC లో ఇలాగే కనిపిస్తుంది: tokens, payments, printer queue, అన్నీ ఒకే చోట.",
@@ -309,6 +308,7 @@ te: {
 "faq1.q": "Free trial ఉందా?", "faq1.a": "అవును — మొదటి 7 రోజులు పూర్తిగా free. తర్వాత ₹240/నెల, నేరుగా మీ UPI కి pay చేస్తారు.",
 "faq2.q": "Internet లేకుండా పనిచేస్తుందా?", "faq2.a": "అవును — offline version షాప్ WiFi మీద పనిచేస్తుంది. Customer తన ఫోన్‌తో షాప్ WiFi కి connect అయితే చాలు.",
 "faq3.q": "Customer కి app download అవసరమా?", "faq3.a": "లేదు — customer షాప్ దగ్గర QR scan చేసి ఫోన్ browser లోనే order చేయవచ్చు. Mobile app త్వరలో వస్తుంది.",
+      "faq4.q": "Install \u0c1a\u0c47\u0c38\u0c47\u0c1f\u0c4d\u0c1f\u0c2a\u0c4d\u0c2a\u0c41\u0c21\u0c41 Windows warning \u0c35\u0c38\u0c4d\u0c24\u0c47?", "faq4.a": "Windows \u201cUnknown publisher\u201d \u0c05\u0c28\u0c3f \u0c1a\u0c42\u0c2a\u0c3f\u0c38\u0c4d\u0c24\u0c47 \u2014 More info \u2192 Run anyway \u0c28\u0c4a\u0c15\u0c4d\u0c15\u0c02\u0c21\u0c3f. \u0c07\u0c26\u0c3f \u0c2e\u0c28 installer \u0c0f \u2014 \u0c15\u0c4a\u0c24\u0c4d\u0c24\u0c26\u0c3f \u0c15\u0c3e\u0c2c\u0c4d\u0c1f\u0c3f, code-signing \u0c32\u0c47\u0c15\u0c2a\u0c4b\u0c35\u0c21\u0c02 \u0c35\u0c32\u0c4d\u0c32 \u0c08 \u0c35\u0c3e\u0c30\u0c4d\u0c28\u0c3f\u0c02\u0c17 \u0c35\u0c38\u0c4d\u0c24\u0c41\u0c02\u0c26\u0c3f.",
 "privacy.title": "Privacy / గోప్యత", "privacy.text": "ఈ website మీ personal data సేకరించదు. Downloads GitHub నుంచి వస్తాయి. షాప్‌లో customer files auto-delete అవుతాయి (owner ఎంచుకున్న గంటల్లో). ప్రశ్నలు ఉంటే mail చేయండి.",
 "footer.about": "Xerox & print shops కోసం print kiosk software — customer upload → pay → token → collect. Offline + online, Telugu + English.",
 "footer.links": "Quick Links", "footer.github": "Downloads on GitHub", "footer.contact": "Contact", "footer.email": "Email", "footer.contacttext": "Shop owners — trial & setup కోసం mail చేయండి.",
@@ -322,7 +322,6 @@ ta: {
 "hero.btn": "⬇️ Windows-க்கு Download செய்யுங்கள்",
 "hero.btnsmall": "v1.3.0 &nbsp;•&nbsp; Windows 10 / 11 &nbsp;•&nbsp; ~10 MB &nbsp;•&nbsp; 1 நிமிடத்தில் Install",
 "hero.note1": "7 நாட்கள் FREE trial &nbsp;•&nbsp; பிறகு ₹240/மாதம் (₹8/நாள்) &nbsp;•&nbsp; பணம் நேரடியாக உங்கள் UPI-க்கு",
-"hero.note2": "Install செய்யும்போது Windows “Unknown publisher” என்று காட்டினால் — More info → Run anyway அழுத்துங்கள்.",
 "hero.cardtitle": "🖨️ Shop Dashboard — Live Tokens",
 "chip.printing": "Printing", "chip.paid": "Paid", "chip.waiting": "Waiting",
 "hero.cardmini": "இது example மட்டுமே — உண்மையான dashboard கடை PC-யில் இப்படித்தான் தெரியும்: tokens, payments, printer queue, அனைத்தும் ஒரே இடத்தில்.",
@@ -347,6 +346,7 @@ ta: {
 "faq1.q": "Free trial உள்ளதா?", "faq1.a": "ஆம் — முதல் 7 நாட்கள் முழுமையாக free. பிறகு ₹240/மாதம், நேரடியாக உங்கள் UPI-க்கு pay செய்யலாம்.",
 "faq2.q": "Internet இல்லாமல் வேலை செய்யுமா?", "faq2.a": "ஆம் — offline version கடை WiFi-யில் வேலை செய்யும். வாடிக்கையாளர் தன் போனை கடை WiFi-யுடன் connect செய்தால் போதும்.",
 "faq3.q": "வாடிக்கையாளர் app download செய்ய வேண்டுமா?", "faq3.a": "இல்லை — வாடிக்கையாளர் கடையில் QR scan செய்து போன் browser-லேயே order செய்யலாம். Mobile app விரைவில் வருகிறது.",
+      "faq4.q": "Install \u0b9a\u0bc6\u0baf\u0bcd\u0baf\u0bc1\u0bae\u0bcd\u0baa\u0bc7\u0bae\u0bcd\u0baa\u0bc1 Windows warning \u0bb5\u0ba8\u0bcd\u0ba4\u0bbe\u0bb2\u0bcd?", "faq4.a": "Windows \u201cUnknown publisher\u201d \u0b8e\u0ba9\u0bcd\u0bb1\u0bc1 \u0b95\u0bbe\u0b9f\u0bcd\u0b9f\u0bbf\u0ba9\u0bbe\u0bb2\u0bcd \u2014 More info \u2192 Run anyway \u0b85\u0bb4\u0bc1\u0ba4\u0bcd\u0ba4\u0bc1\u0b99\u0bcd\u0b95\u0bb3\u0b99\u0bcd\u0b95\u0bb3\u0b99\u0bcd. \u0b87\u0ba4\u0bc1 \u0b8e\u0b99\u0bcd\u0b95\u0bb3\u0baf\u0bcd installer \u0ba4\u0bbe\u0ba9\u0bcd \u2014 \u0baa\u0bc1\u0ba4\u0bbf\u0baf\u0bc1 \u0b8e\u0ba9\u0bcd\u0baa\u0ba4\u0bc1\u0bae\u0bc1\u0bae\u0bc1\u0bae\u0bcd, code-signing \u0b87\u0bb2\u0bcd\u0bb2\u0bbe\u0ba4\u0ba4\u0bbe\u0bb2\u0bcd \u0b87\u0ba8\u0bcd\u0ba4 warning \u0bb5\u0bb0\u0bc1\u0b95\u0bbf\u0bb1\u0bbf\u0bb1\u0ba4\u0bc1.",
 "privacy.title": "தனியுரிமை", "privacy.text": "இந்த website உங்கள் personal data-வை சேகரிக்காது. Downloads GitHub-ல் இருந்து வருகின்றன. கடையில் customer files auto-delete ஆகும் (owner தேர்ந்தெடுத்த நேரத்தில்). கேள்விகள் இருந்தால் mail செய்யுங்கள்.",
 "footer.about": "Xerox & print shops-க்கான print kiosk software — customer upload → pay → token → collect. Offline + online, 4 மொழிகள்.",
 "footer.links": "விரைவு இணைப்புகள்", "footer.github": "Downloads on GitHub", "footer.contact": "Contact", "footer.email": "Email", "footer.contacttext": "Shop owners — trial & setup-க்கு mail செய்யுங்கள்.",
@@ -360,7 +360,6 @@ hi: {
 "hero.btn": "⬇️ Windows के लिए Download करें",
 "hero.btnsmall": "v1.3.0 &nbsp;•&nbsp; Windows 10 / 11 &nbsp;•&nbsp; ~10 MB &nbsp;•&nbsp; 1 मिनट में Install",
 "hero.note1": "7 दिन FREE trial &nbsp;•&nbsp; फिर ₹240/महीना (₹8/दिन) &nbsp;•&nbsp; पैसा सीधे आपके UPI में",
-"hero.note2": "Install करते समय Windows “Unknown publisher” दिखाए तो — More info → Run anyway दबाएँ.",
 "hero.cardtitle": "🖨️ Shop Dashboard — Live Tokens",
 "chip.printing": "Printing", "chip.paid": "Paid", "chip.waiting": "Waiting",
 "hero.cardmini": "यह सिर्फ example है — असली dashboard दुकान के PC पर ऐसा ही दिखता है: tokens, payments, printer queue, सब एक जगह.",
@@ -385,6 +384,7 @@ hi: {
 "faq1.q": "क्या free trial है?", "faq1.a": "हाँ — पहले 7 दिन पूरी तरह free. फिर ₹240/महीना, सीधे आपके UPI में pay करें.",
 "faq2.q": "क्या यह internet के बिना काम करता है?", "faq2.a": "हाँ — offline version दुकान के WiFi पर काम करता है. Customer को सिर्फ अपने फोन को दुकान के WiFi से connect करना है.",
 "faq3.q": "क्या customer को app download करना होगा?", "faq3.a": "नहीं — customer दुकान पर QR scan करके फोन के browser में ही order कर सकता है. Mobile app जल्द आ रहा है.",
+      "faq4.q": "Install \u0915\u0930\u0924\u0947 \u0938\u092e\u092f Windows warning \u0926\u093f\u0916\u093e\u090f \u0924\u094b?", "faq4.a": "Windows \u201cUnknown publisher\u201d \u0926\u093f\u0916\u093e\u090f \u0924\u094b \u2014 More info \u2192 Run anyway \u0926\u092c\u093e\u090f\u0901. \u092f\u0939 \u0939\u092e\u093e\u0930\u093e installer \u0939\u0940 \u0939\u0948 \u2014 \u0928\u092f\u093e \u0939\u094b\u0928\u0947 \u0914\u0947 \u0915\u093e\u0930\u0923 \u0914\u094b\u0921\u002d\u0938\u093e\u0907\u0928\u093f\u0902\u0917 \u0928 \u0939\u094b\u0928\u0947 \u0915\u0947 \u0915\u093e\u0930\u0923 \u092f\u0939 warning \u0906\u0924\u093e \u0939\u0948.",
 "privacy.title": "गोपनीयता", "privacy.text": "यह website आपका personal data collect नहीं करती. Downloads GitHub से आते हैं. दुकान में customer files auto-delete होती हैं (owner के चुने हुए घंटों में). सवाल हों तो mail करें.",
 "footer.about": "Xerox & print shops के लिए print kiosk software — customer upload → pay → token → collect. Offline + online, 4 भाषाएँ.",
 "footer.links": "त्वरित लिंक", "footer.github": "Downloads on GitHub", "footer.contact": "Contact", "footer.email": "Email", "footer.contacttext": "Shop owners — trial & setup के लिए mail करें.",
@@ -402,8 +402,12 @@ function setLang(l) {
   var sel = document.getElementById('langSelect');
   if (sel) sel.value = l;
 }
-var savedLang = 'te';
-try { savedLang = localStorage.getItem('printzo-lang') || 'te'; } catch (e) {}
+var savedLang = '';
+try { savedLang = localStorage.getItem('printzo-lang') || ''; } catch (e) {}
+if (!savedLang) {
+  var bl = (navigator.language || 'te').slice(0, 2).toLowerCase();
+  savedLang = T[bl] ? bl : 'te';
+}
 if (!T[savedLang]) savedLang = 'te';
 setLang(savedLang);
 document.getElementById('langSelect').addEventListener('change', function (e) { setLang(e.target.value); });
