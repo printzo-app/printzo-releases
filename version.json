@@ -1,7 +1,1 @@
-{
-  "version": "1.3.3",
-  "download_url": "https://raw.githubusercontent.com/printzo-app/printzo-releases/main/PrintKiosk-Setup.exe",
-  "code_url": "https://raw.githubusercontent.com/printzo-app/printzo-releases/main/PrintKiosk-Code-1.3.3.zip",
-  "code_sha256": "7e8d00ea9750341d4d667fb6e794522cb42c130f5e1008f1dcbd0099d6b7327e",
-  "notes": "Printzo v1.3.3 — Clear labels: owner dashboard shows 'Owner login — shop name' banner, customer page shows 'Customer page — shop name' banner, header shows whose login it is, Owner button hides inside the owner view. Includes v1.3.2 WhatsApp QR, v1.3.1 QR fix, UPI tap-to-pay, how-it-works strip, multi-machine Auto / Print-next (Telugu + English)"
-}
+{"code_sha256":"ece28af32e46d05725231781c72ac5f4e0a5a6290c856e1d8158f17dbc670a47","code_url":"https://raw.githubusercontent.com/printzo-app/printzo-releases/main/Printzo-Code-1.4.1.zip","download_url":"https://raw.githubusercontent.com/printzo-app/printzo-releases/main/Printzo-Setup.exe","notes":"Printzo v1.4.1 — sidebar dashboard, Select Devices (your real printers), machine health (toner + page count), customer bill with GST option, themes, contact card; QR opens WhatsApp. Code only — shop settings, rates, PIN and machines never change.","version":"1.4.1"}
