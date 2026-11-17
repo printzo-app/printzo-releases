@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://printzo-app.github.io/printzo-releases/sitemap.xml
